@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>my pet page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: darkslategrey;
+                padding: 65px 30px 30px 30px;
+                min-height: 1802px;
+            }
+            h1,h2{color: darkorange;}
+            .top-bar{
+                position: fixed;
+                top: 0;
+                left:0;
+                right:0;
+                background-color: darkorange;color: white;
+                padding: 14px 20px;
+                margin: 5px;
+            }
+            .list-items{
+                background-color: white;
+                border: 2px solid darkorange;
+                padding: 10px 20px ;
+                margin: 5px 0;
+            }
+            .speacial-note{
+                position: relative;
+                left: 30px;
+                padding: 10px 20px;
+                background-color: gold;
+            }
+            .pet-card{
+                position: relative;
+                background-color: white;
+                 border: 3px solid darkorange;
+                padding: 15px 25px ;
+            }
+            .badge{
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                background-color: forestgreen;
+                color: white;
+                padding: 4px 8px;
+            }
+            .section-label{
+                position: sticky;
+                top: 55px;
+                background-color: darkorange;
+                color: white;
+                padding: 10px 20px;
+                margin: 15px 0 8px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="top-bar">my pet page - Buddy the labrador</div>
+        <h1>meet Buddy!</h1>
+
+        <h2>static</h2>
+        <div class="list-items">Breed: labrador</div>
+        <div class="list-items">age: 2years old</div>
+
+        <h2>relative</h2>
+        <p>this note shifts right from its normal spot.</p>
+        <div class="speacial-note">pet of the month!</div>
+
+        <h2>absolute</h2>
+        <p>the badge is pinned to the corner of the card.</p>
+            <div class="pet-card">
+        <p>Buddy-labrador,2 years</p>
+        <div class="badge">adopted!</div>
+        </div>
+    </body>
+</html>
