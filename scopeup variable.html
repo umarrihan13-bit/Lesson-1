@@ -1,0 +1,20 @@
+<html>
+    <head><title>scope up</title></head>
+
+    <body>
+        <p>A function can acces variable defined inside the function</p>
+        <button type="button" oneclick="my Function()">Click me !!</button>
+
+        <p id="demo"></p>
+        <p id="demo"></p>
+        <script>
+            var b = 5;
+            function myFunction() {
+                var a = 4
+                document.getElementById("demo").innerHTML = b * a;
+            }
+             document.getElementById("demo1").innerHTML = a;
+             document.getElementById("demo2").innerHTML = b;
+        </script>
+    </body>
+</html>
