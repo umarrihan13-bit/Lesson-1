@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Working Multiplication</title>
+</head>
+<body>
+    <h1>Multiplication Result</h1>
+    <p id="output"></p>
+
+    <script>
+        
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        
+        let number1 = 7;
+        let number2 = 4;
+
+        let result = multiply(number1, number2); // We call 'multiply' here!
+
+        
+        document.getElementById("output").innerText = "The product of " + number1 + " and " + number2 + " is: " + result;
+
+        
+        console.log("From console: " + result);
+    </script>
+</body>
+</html>
