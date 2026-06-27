@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Numbers</title>
+</head>
+<body>
+    <h1>Generated Random Numbers</h1>
+    <div id="output"></div>
+
+    <script>
+        // Function to generate a random whole number within a specified range
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Get the div where we want to display the numbers
+        let outputDiv = document.getElementById("output");
+
+        // Use a loop to generate and display 5 random numbers between 1 and 10
+        for (let i = 0; i < 5; i++) {
+            let num = getRandomInt(1, 10); // Call the getRandomInt function
+            outputDiv.innerHTML += "<p>Number " + (i + 1) + ": " + num + "</p>";
+        }
+    </script>
+</body>
+</html>
