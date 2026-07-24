@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Dilivery Tracker</title>
+        <style>
+            body{font-family: Arial, Helvetica, sans-serif; background: aliceblue; text-align: center; padding: 30px;}
+            h1{ color: #ff5a43;}
+            button{ background: #ff5a43; color: #fff; padding: 10px 25px; border: none;border-radius: 20px; cursor:pointer; margin:5px ;}
+            div{border: 1px solid #ff5a43; width: 280px; margin: 6px auto; padding:8px; text-align: left; border-radius: 6px;}
+        </style>
+    </head>
+    <body>
+        <h1>My delivary app</h1>
+        <button onclick="saveorder()">save order</button>
+        <button onclick="startdelivery()">start delivery</button>
+        <div>json: <span id="json"></span></div>
+        <div>item: <span id="item"></span></div>
+        <div>price: <span id="price"></span></div>
+        <div>status: <span id="status"></span></div>
+        <div>result: <span id="result"></span></div>
+        <script>
+            let order={item:"pizza",price:5,shop:"my snack shop"};
+
+           let o=JSON.parse(JSON.stringify(order));
+
+json.innerHTML=JSON.stringify(order);
+
+item.innerHTML=o.item;
+
+price.innerHTML="$"+o.price;
+
+}
+
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+
+async function startDelivery(){
+
+result.innerHTML="";
+
+status.innerHTML="Order received!";
+
+setTimeout(()=>status.innerHTML="Kitchen is preparing...",1000);
+
+await delay(3000);
+
+status.innerHTML="Out for delivery!";
+
+await delay(2000);
+
+result.innerHTML="Your order has arrived!";
+
+}
+            }
+        </script>
+    </body>
+</html>
