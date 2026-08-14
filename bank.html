@@ -1,0 +1,98 @@
+
+<html>
+<head>
+    <title>Bank of trust App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff; /* AliceBlue - a calm, light blue */
+            color: #333;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            color: #4682b4; /* SteelBlue */
+            text-align: center;
+        }
+        .account-card {
+            background-color: #ffffff;
+            border: 1px solid #add8e6; /* LightBlue */
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .account-card p {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+        .account-card span {
+            font-weight: bold;
+            color: #2f4f4f; /* DarkSlateGray */
+        }
+    </style>
+</head>
+<body>
+    <h1> Bank details <h1>
+
+    <div id="umarAccountDisplay" class="account-card">
+        <p>Account Holder: <span id="umarName"></span></p>
+        <p>Balance: $<span id="umarBalance"></span></p>
+    </div>
+
+    <div id="rifaAccountDisplay" class="account-card">
+        <p>Account Holder: <span id="rifaName"></span></p>
+        <p>Balance: $<span id="rifaBalance"></span></p>
+    </div>
+
+    <div id="irhaAccountDisplay" class="account-card">
+        <p>Account Holder: <span id="irhaName"></span></p>
+        <p>Balance: $<span id="irhaBalance"></span></p>
+    </div>
+
+    <div id="kulsumAccountDisplay" class="account-card">
+        <p>Account Holder: <span id="kulsumName"></span></p>
+        <p>Balance: $<span id="kulsumBalance"></span></p>
+    </div>
+
+    <script>
+        // Define account objects
+        let umarAccount = {
+            name: "Umar",
+            balance: 1000
+        };
+
+        let rifaAccount = {
+            name: "Rifa",
+            balance: 1500
+        };
+
+        let irhaAccount = {
+            name: "Irha",
+            balance: 750
+        };
+
+        let kulsumAccount = {
+            name: "Kulsum",
+            balance: 2000
+        };
+
+        // Display Umar's account
+        document.getElementById("umarName").textContent = umarAccount.name;
+        document.getElementById("umarBalance").textContent = umarAccount.balance;
+
+        // Display Rifa's account
+        document.getElementById("rifaName").textContent = rifaAccount.name;
+        document.getElementById("rifaBalance").textContent = rifaAccount.balance;
+
+        // Display Irha's account
+        document.getElementById("irhaName").textContent = irhaAccount.name;
+        document.getElementById("irhaBalance").textContent = irhaAccount.balance;
+
+        // Display Kulsum's account
+        document.getElementById("kulsumName").textContent = kulsumAccount.name;
+        document.getElementById("kulsumBalance").textContent = kulsumAccount.balance;
+    </script>
+</body>
+</html>
