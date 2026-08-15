@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff; /* AliceBlue - a calm, light blue */
+            color: #333;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            color: #4682b4; /* SteelBlue */
+            text-align: center;
+        }
+        .account-card {
+            background-color: #ffffff;
+            border: 1px solid #add8e6; /* LightBlue */
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .account-card p {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+        .account-card span {
+            font-weight: bold;
+            color: #2f4f4f; /* DarkSlateGray */
+        }
+        .expense-item { /* New style for individual expense items */
+            color: #cc0000; /* Red for expenses */
+            font-size: 0.95em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Bank App</h1>
+
+    <!-- Umar's Account Display -->
+    <div id="umarAccountDisplay" class="account-card">
+        <p>Account Holder: <span id="umarName"></span></p>
+        <p>Balance: $<span id="umarBalance"></span></p>
+        <h3>Umar's Expenses:</h3>
+        <div id="umarExpensesList">
+            <!-- Umar's expenses will appear here -->
+        </div>
+    </div>
+
+    <!-- Rifa's Account Display -->
+    <div id="rifaAccountDisplay" class="account-card">
+        <p>Account Holder: <span id="rifaName"></span></p>
+        <p>Balance: $<span id="rifaBalance"></span></p>
+        <h3>Rifa's Expenses:785</h3>
+        <div id="rifaExpensesList">
+            <!-- Rifa's expenses will appear here -->
+        </div>
+    </div>
+
+    <!-- Irha's Account Display -->
+    <div id="irhaAccountDisplay" class="account-card">
+        <p>Account Holder: <span id="irhaName"></span></p>
+        <p>Balance: $<span id="irhaBalance"></span></p>
+        <h3>Irha's Expenses:36</h3>
+        <div id="irhaExpensesList">
+            <!-- Irha's expenses will appear here -->
+        </div>
+    </div>
+
+    <!-- Kulsum's Account Display -->
+    <div id="kulsumAccountDisplay" class="account-card">
+        <p>Account Holder: <span id="kulsumName"></span></p>
+        <p>Balance: $<span id="kulsumBalance"></span></p>
+        <h3>Kulsum's Expenses:300</h3>
+        <div id="kulsumExpensesList">
+            <!-- Kulsum's expenses will appear here -->
+        </div>
+    </div>
+
+    <script>
+        // Define account objects with a transactions array
+        let umarAccount = {
+            name: "Umar",
+            balance: 1000,
+            transactions: []
+        };
+
+        let rifaAccount = {
+            name: "Rifa",
+            balance: 1500,
+            transactions: []
+        };
+
+        let irhaAccount = {
+            name: "Irha",
+            balance: 750,
+            transactions: []
+        };
+
+        let kulsumAccount = {
+            name: "Kulsum",
+            balance: 2000,
+            transactions: []
+        };
+
+        // Function to add a transaction and update balance
+        function addTransaction(account, type, amount) {
+            account.transactions.push({ type: type, amount: amount });
+            if (type === "income") {
+                account.balance += amount;
+            } else if (type === "expense") {
+                account.balance -= amount;
+            }
+        }
+
+        // --- Add transactions for each person ---
+        addTransaction(umarAccount, "income", 200);
+        addTransaction(umarAccount, "expense", 50);
+
+        addTransaction(rifaAccount, "expense", 75);
+        addTransaction(rifaAccount, "income", 300);
+
+        addTransaction(irhaAccount, "income", 150);
+        addTransaction(irhaAccount, "expense", 25);
+        addTransaction(irhaAccount, "expense", 60);
+
+        addTransaction(kulsumAccount, "expense", 100);
+        addTransaction(kulsumAccount, "income", 500);
+
+        // --- Display updated balances for all accounts ---
+        document.getElementById("umarName").textContent = umarAccount.name;
+        document.getElementById("umarBalance").textContent = umarAccount.balance;
+
+        document.getElementById("rifaName").textContent = rifaAccount.name;
+        document.getElementById("rifaBalance").textContent = rifaAccount.balance;
+
+        document.getElementById("irhaName").textContent = irhaAccount.name;
+        document.getElementById("irhaBalance").textContent = irhaAccount.balance;
+
+        document.getElementById("kulsumName").textContent = kulsumAccount.name;
+        document.getElementById("kulsumBalance").textContent = kulsumAccount.balance;
+
+        // The JavaScript to actually *show* the expenses will go here next!
+    </script>
+</body>
+</html>
